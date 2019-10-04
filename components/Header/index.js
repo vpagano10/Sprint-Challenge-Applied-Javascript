@@ -17,9 +17,9 @@ function HeaderCreator() {
     const title = document.createElement('h1');
     const temperature = document.createElement('span');
 
-    showDate.textContent = 'sample';
+    showDate.textContent = 'SMARCH 28, 2019';
     title.textContent = 'Lambda Times';
-    temperature.textContent = 'sample';
+    temperature.textContent = '98°';
 
     header.classList.add('header');
     showDate.classList.add('date');
@@ -28,11 +28,11 @@ function HeaderCreator() {
     header.appendChild(showDate);
     header.appendChild(title);
     header.appendChild(temperature);
+    entryPoint.appendChild(header);
 
     // entryPoint.appendChild(header);
     return header;
 }
-
 // const headerTabs = document.querySelector('.header-container');
 
 entryPoint.appendChild(HeaderCreator());

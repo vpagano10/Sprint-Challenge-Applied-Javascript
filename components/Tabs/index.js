@@ -13,8 +13,7 @@ axios
     .then(response => {
         console.log(response);
         response.data.topics.forEach(item => {
-            const newTopic = TabCreator(item);
-            entryPoint.appendChild(newTopic);
+            TabCreator(item);
         })
     })
     .catch(error => {
@@ -22,7 +21,7 @@ axios
     });
 
 
-const entryPointTwo = document.querySelector('.topics');
+const entryPointTwo = document.querySelector('.tabs .topics');
 
 function TabCreator(data) {
     const tabs = document.createElement('div');
@@ -31,7 +30,8 @@ function TabCreator(data) {
 
     tabs.classList.add('tab');
 
+    entryPointTwo.appendChild(tabs);
+
     return tabs;
 }
 
-entryPointTwo.appendChild(TabCreator());
